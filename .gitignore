@@ -158,8 +158,6 @@ local.properties
 # PDT-specific
 .buildpath
 
-# sbteclipse plugin
-.target
 
 # TeXlipse plugin
 .texlipse
@@ -192,7 +190,6 @@ sftp-config.json
 
 
 ### Maven template
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
