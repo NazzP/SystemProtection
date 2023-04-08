@@ -29,8 +29,6 @@
 hs_err_pid*
 out/
 .idea/
-.mvn/
-.target/
 .idea_modules/
 *.iml
 *.ipr
