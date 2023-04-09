@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Sphere?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #11253a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab3.Controller">
+   <children>
+      <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #126249;">
+         <children>
+            <Button fx:id="ClearButton" layoutX="245.0" layoutY="118.0" mnemonicParsing="false" onAction="#ClearAll" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #126249; -fx-border-radius: 5; -fx-border-color: #11253a; -fx-text-fill: #fafafa;" text="Clear">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="EncryptButton" layoutX="351.0" layoutY="118.0" mnemonicParsing="false" onAction="#Encrypt" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #126249; -fx-border-radius: 5; -fx-border-color: #11253a; -fx-text-fill: #fafafa;" text="Encrypt">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="67.0" layoutY="41.0" text="Message" textFill="#11253a">
+               <font>
+                  <Font name="Serif Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="248.0" text="Encrypted message" textFill="#11253a">
+               <font>
+                  <Font name="Serif Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldMessage" layoutX="208.0" layoutY="39.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-color: #126249; -fx-border-radius: 5; -fx-border-color: #11253a; -fx-text-fill: #fafafa;" />
+            <TextField fx:id="TextFieldResult" editable="false" layoutX="208.0" layoutY="246.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-color: #126249; -fx-border-radius: 5; -fx-border-color: #11253a; -fx-text-fill: #fafafa;" />
+            <Sphere cullFace="NONE" drawMode="LINE" layoutX="125.0" layoutY="136.0" radius="50" />
+            <Line endX="206.0" layoutX="254.0" layoutY="212.0" startX="-225.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="128.0" layoutY="35.0" text="Ceaser Cipher v 3">
+         <font>
+            <Font name="Yu Gothic Regular" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.023696682464455" endY="1.0" startX="0.023696682464454985" startY="0.2938388625592417">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
