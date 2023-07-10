@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Sphere?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E4C7B7;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab5.Controller">
+   <children>
+      <AnchorPane layoutY="75.0" prefHeight="325.0" prefWidth="600.0" style="-fx-background-color: #8B4C70;">
+         <children>
+            <Sphere cullFace="FRONT" drawMode="LINE" layoutX="300.0" layoutY="89.0" radius="50" />
+            <Line endX="65.0" layoutX="299.0" layoutY="179.0" startX="-64.0" />
+            <Line endX="-100.0" endY="119.0" layoutX="334.0" layoutY="59.0" startX="-100.0" startY="-59.0" />
+            <Line endX="-100.0" endY="38.0" layoutX="464.0" layoutY="143.0" startX="-100.0" startY="-143.0" />
+            <Line endX="-100.0" endY="146.0" layoutX="400.0" layoutY="179.0" startX="-100.0" />
+            <Button fx:id="EncryptButton" layoutX="91.0" layoutY="114.0" mnemonicParsing="false" onAction="#encrypt" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70;" text="Encrypt">
+               <font>
+                  <Font name="Goudy Old Style" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="DecryptButton" layoutX="460.0" layoutY="114.0" mnemonicParsing="false" onAction="#decrypt" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70;" text="Decrypt">
+               <font>
+                  <Font name="Goudy Old Style" size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="TextFieldMessage" layoutX="52.0" layoutY="64.0" onMouseClicked="#getKey" promptText="Message" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70; -fx-text-fill: #fafafa;" />
+            <TextField fx:id="TextFieldEncryptedMessage" editable="false" layoutX="421.0" layoutY="64.0" promptText="Encrypted Message" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70; -fx-text-fill: #fafafa;" />
+            <TextField fx:id="TextFieldResult" editable="false" layoutX="52.0" layoutY="239.0" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70; -fx-text-fill: #fafafa;" />
+            <Button fx:id="ClearButton" layoutX="271.0" layoutY="238.0" mnemonicParsing="false" onAction="#ClearAll" style="-fx-background-color: #E4C7B7;" text="Clear">
+               <font>
+                  <Font name="Goudy Old Style" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="ExitButton" layoutX="276.0" layoutY="283.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #E4C7B7;" text="Exit">
+               <font>
+                  <Font name="Goudy Old Style" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="92.0" layoutY="22.0" text="Message" textFill="#e4c7b7">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="416.0" layoutY="22.0" text="Encrypted message" textFill="#e4c7b7">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldResultMessage" editable="false" layoutX="421.0" layoutY="240.0" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70; -fx-text-fill: #fafafa;" />
+            <Label layoutX="47.0" layoutY="198.0" text="Encrypted message" textFill="#e4c7b7">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="461.0" layoutY="198.0" text="Message" textFill="#e4c7b7">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldKey" editable="false" layoutX="250.0" layoutY="198.0" prefHeight="27.0" prefWidth="100.0" promptText="key" style="-fx-border-color: #E4C7B7; -fx-border-radius: 5; -fx-background-color: #8B4C70; -fx-text-fill: #fafafa;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="188.0" layoutY="14.0" text="Feistel Cipher" textAlignment="CENTER" textFill="#8b4c70">
+         <font>
+            <Font name="Book Antiqua Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
